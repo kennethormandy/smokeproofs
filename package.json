@@ -22,6 +22,7 @@
     "test": "mocha --reporter spec"
   },
   "devDependencies": {
+    "analytics.js": "~1.3.30",
     "expect.js": "~0.3.0",
     "mocha": "~1.18.2"
   }

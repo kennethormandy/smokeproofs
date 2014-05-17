@@ -23,7 +23,7 @@
 
     SmokeProofs.prototype = {
 
-      categorise: function(initiator) {
+      _categorise: function(initiator) {
         if(initiator === 'css') {
           return 'woff';
         } else if (initiator === 'link') {
@@ -35,7 +35,7 @@
         }
       },
 
-      parseName: function(name) {
+      _parseName: function(name) {
         if(name.indexOf('themes.googleusercontent.com') !== -1 || name.indexOf('fonts.googleapis.com') !== -1) {
           return 'Google';
         } else if(name.indexOf('use.typekit.net') !== -1) {
@@ -55,25 +55,40 @@
         var resources = ''
           , i;
 
-        if (typeof window == 'object' && typeof window.performance == 'object') {
-          if (typeof window.performance.getEntriesByName == 'function') {
-            resources = window.performance.getEntriesByType('resource');
-            console.log(resources[0]);
-            for (i in resources) {
-              this._record(this.categorise(resources[i].initiatorType), this.parseName(resources[i].name), resources[i]);
+        if(typeof analytics === 'undefined' && typeof ga === 'undefined') {
+          return console.warn('Analytics.js or Google Analytics are ' +
+                               'missing or not working properly. ' +
+                               'Need help? Open an issue on GitHub: ' +
+                               'https://github.com/kennethormandy/smokeproofs/issues');
+        } else {
+          if(typeof window == 'object' && typeof window.performance == 'object') {
+            if(typeof window.performance.getEntriesByName == 'function') {
+              resources = window.performance.getEntriesByType('resource');
+              for (i in resources) {
+                this._record(this._categorise(resources[i].initiatorType), this._parseName(resources[i].name), resources[i]);
+              }
             }
           }
         }
       },
 
       _record: function(category, label, resource) {
-        var dns = Math.round(resource.domainLookupEnd - resource.domainLookupStart)
-          , tcp = Math.round(resource.connectEnd - resource.connectStart)
-          , total = Math.round(resource.responseEnd - resource.startTime);
+        var dnsTime = Math.round(resource.domainLookupEnd - resource.domainLookupStart)
+          , tcpTime = Math.round(resource.connectEnd - resource.connectStart)
+          , totalTime = Math.round(resource.responseEnd - resource.startTime);
 
-        ga('send', 'timing', 'webfont-' + category, label, dns, 'dns');
-        ga('send', 'timing', 'webfont-' + category, label, tcp, 'tcp');
-        ga('send', 'timing', 'webfont-' + category, label, total, 'total');
+        if(typeof analytics !== 'undefined') {
+          analytics.track('Loaded webfont ' + category, {
+            service: label,
+            dns: dnsTime,
+            tcp: tcpTime,
+            total: totalTime
+          });
+        } else if(typeof ga !== 'undefined') {
+          ga('send', 'timing', 'Loaded webfont ' + category, label, dnsTime, 'dns');
+          ga('send', 'timing', 'Loaded webfont ' + category, label, tcpTime, 'tcp');
+          ga('send', 'timing', 'Loaded webfont ' + category, label, totalTime, 'total');
+        }
       }
 
     }
