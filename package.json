@@ -6,7 +6,7 @@
   "author": "Kenneth Ormandy <kenneth@chloi.io> (http://kennethormandy.com)",
   "license": "MIT",
   "private": true,
-  "main": "smokeproofs.js",
+  "main": "./src/smokeproofs.js",
   "repository": "https://github.com/kennethormandy/smokeproofs.git",
   "keywords": [
     "analytics",
@@ -19,7 +19,7 @@
     "test": "mocha --reporter spec"
   },
   "devDependencies": {
-    "expect.js": "^0.3.1",
-    "mocha": "^1.18.2"
+    "expect.js": "~0.3.0",
+    "mocha": "~1.18.2"
   }
 }
