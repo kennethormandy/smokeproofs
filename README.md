@@ -24,8 +24,6 @@ In a future versions, the following platforms will also be supported:
 
 - Custom (pull from WebFontLoader)
 - Fontdeck
-- Hofler & Co.
-- House Industries’ preview
 - Webtype
 
 ## License
