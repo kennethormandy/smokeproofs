@@ -3,7 +3,8 @@ describe('smokeproofs', function () {
     , expect = null;
 
   if (typeof exports === 'object') {
-    smokeproofs = require('../src/smokeproofs');
+    // smokeproofs = require('../')({ 'foo': 'bar' });
+    smokeproofs = require('../');
     expect = require('expect.js');
   } else {
     smokeproofs = window.smokeproofs;
@@ -12,7 +13,7 @@ describe('smokeproofs', function () {
 
   describe('basic', function () {
     it('should exist', function () {
-      smokeproofs();
+      expect(smokeproofs()).to.be.an('object'); // I guess…
     });
   });
 
