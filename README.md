@@ -15,7 +15,8 @@ git clone https://github.com/kennethormandy/smokeproofs
 ## Supported Services
 
 - Google Fonts
-- Monotype
+- H&FJ / H&Co. cloud.Typography
+- Monotype Fonts.com
 - MyFonts
 - Typekit
 - Typotheque

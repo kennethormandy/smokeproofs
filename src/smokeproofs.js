@@ -38,16 +38,16 @@
       _parseName: function(name) {
         if(name.indexOf('themes.googleusercontent.com') !== -1 || name.indexOf('fonts.googleapis.com') !== -1) {
           return 'Google Fonts';
-        } else if(name.indexOf('use.typekit.net') !== -1) {
-          return 'Typekit';
+        } else if(name.indexOf('cloud.typography.com') !== -1) {
+          return 'H&FJ / H&Co. cloud.Typography';
         } else if(name.indexOf('fast.fonts.net') !== -1) {
           return 'Monotype Fonts.com';
-        } else if(name.indexOf('fonts.typotheque.com') !== -1) {
-          return 'Typotheque';
         } else if(name.indexOf('easy.myfonts.net') !== -1) {
           return 'MyFonts';
-        } else if(name.indexOf('cloud.typography.com') !== -1) {
-          return 'H&Co. cloud.Typography';
+        } else if(name.indexOf('use.typekit.net') !== -1) {
+          return 'Typekit';
+        } else if(name.indexOf('fonts.typotheque.com') !== -1) {
+          return 'Typotheque';
         } else {
           return name;
         }
