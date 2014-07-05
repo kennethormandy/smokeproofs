@@ -29,7 +29,7 @@ In a future versions, the following platforms will also be supported:
 
 ## Contributing
 
-Thanks for considering contributing! There’s information about how to [get started with Smoke Proofs here](CONTRIBUTING.md).
+Thanks for considering contributing! There’s information about how to [get started with Smokeproofs here](CONTRIBUTING.md).
 
 ## License
 
