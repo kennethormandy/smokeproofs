@@ -1,10 +1,10 @@
-[![](http://placehold.it/1546x500/000/fff&text=Smoke%20Proofs)](http://smokeproofs.kennethormandy.com)
+[![](http://placehold.it/1546x500/000/fff&text=Smokeproofs)](http://smokeproofs.kennethormandy.com)
 
 ***
 
-# Smoke Proofs
+# Smokeproofs
 
-Record how efficiently visitors receive your web fonts.
+Record font performance from Google Fonts, Typekit, and more to Google Analytics and Segmentio.
 
 ## Getting started
 
@@ -15,7 +15,7 @@ git clone https://github.com/kennethormandy/smokeproofs
 ## Supported Services
 
 - Google Fonts
-- H&FJ / H&Co. cloud.Typography
+- H&FJ / H&Co. Cloud.typography
 - Monotype Fonts.com
 - MyFonts
 - Typekit
@@ -23,9 +23,13 @@ git clone https://github.com/kennethormandy/smokeproofs
 
 In a future versions, the following platforms will also be supported:
 
-- Custom (pull from WebFontLoader)
-- Fontdeck
-- Webtype
+- [Custom (pull from WebFontLoader)](https://github.com/kennethormandy/smokeproofs/issues/1)
+- [Fontdeck](https://github.com/kennethormandy/smokeproofs/issues/2)
+- [Webtype](https://github.com/kennethormandy/smokeproofs/issues/3)
+
+## Contributing
+
+Thanks for considering contributing! There’s information about how to [get started with Smoke Proofs here](CONTRIBUTING.md).
 
 ## License
 
