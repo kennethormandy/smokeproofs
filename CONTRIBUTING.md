@@ -2,6 +2,10 @@
 
 Thanks for considering contributing to Default!
 
+If you’re new to all this GitHub, Open Source, JavaScript, Node.js, testing, wow all this stuff seems really difficult I just want to make my sites better stuff, I get it. I’m still there, too.
+
+Feel free to [send me an email](kenneth@chloi.io) or [open an issue here](http://github.com/kennethormandy/smokeproofs/issues) and I’ll do my best to share some resources that have helped me out. No promises—I’m still learning, too—but it’d be great to have you involved in any capacity if you’re interested.
+
 ## Opening issues
 
 If you find a bug, please feel free to [open an issue](https://github.com/kennethormandy/default/issues).
