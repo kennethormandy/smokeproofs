@@ -1,5 +1,5 @@
 /*!
- * smokeproofs.js 0.0.1
+ * smokeproofs.js 0.0.3
  * http://smokeproofs.kennethormandy.com
  * https://github.com/kennethormandy/smokeproofs
  *
