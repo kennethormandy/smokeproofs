@@ -16,11 +16,11 @@
 
   var smokeproofs = function() {
 
-    var SmokeProofs = function() {
+    var Smokeproofs = function() {
       this._init(this);
     }
 
-    SmokeProofs.prototype = {
+    Smokeproofs.prototype = {
 
       _label: function(initiator) {
         if(initiator === 'css') {
@@ -110,7 +110,7 @@
 
     }
 
-    return new SmokeProofs();
+    return new Smokeproofs();
   };
 
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
